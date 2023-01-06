@@ -1,38 +1,23 @@
-let vocales = ["a", "e", "i", "o", "u"];
-let llaves = ["ai", "enter", "imes", "ober", "ufat"];
+import {encriptarTexto} from './encriptar.js';
+import {desencriptarTexto} from './desencriptar.js';
+import {vocales} from "./codigos.js"
+console.log(vocales)
 
-let texto = "Hola Felipe este es un mensaje secreto";
+let input = document.querySelector("input")
 
-function encriptarTexto(texto) {
-    texto = texto.toLowerCase();
-    let textoEncriptado = "";
-    let bandera = false;
-    for (letra in texto) {
-        for (let l=0; l<vocales.length; l++) {
-            if (texto[letra]==vocales[l]){
-                textoEncriptado += llaves[l];
-                bandera = true;
-            }
-        }
-        if (!bandera) {
-            textoEncriptado += texto[letra];
-        }
-        bandera = false;     
-    }
-    return textoEncriptado;
+let encriptar = document.querySelector("#encriptar");
+let desencriptar = document.querySelector("#desencriptar");
+
+let secreto = document.querySelector("#secreto");
+
+function mostrarTextoDesencriptado() {
+    secreto.innerHTML = desencriptarTexto(input.value);
 }
-console.log(encriptarTexto(texto));
 
-let textoEncriptado = "hoberlai fenterlimEspenter enterstenter enters ufatn menternsaijenter sentercrentertober";
-
-function desencriptarTexto(textoEncriptado) {
-    textoEncriptado = textoEncriptado.toLowerCase();
-    let texto = "";
-    for (let l=0; l<llaves.length; l++) {
-        texto = textoEncriptado.replaceAll(llaves[l], vocales[l]);
-        textoEncriptado = texto;
-    }
-    return texto;
+function mostrarTextoEncriptado() {
+    secreto.innerHTML = encriptarTexto(input.value);
 }
-console.log(desencriptarTexto(textoEncriptado));
+
+encriptar.onclick = mostrarTextoEncriptado;
+desencriptar.onclick = mostrarTextoDesencriptado;
 
