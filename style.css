@@ -1,3 +1,95 @@
 body {
-    background-color: aquamarine;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+
+}
+
+.section {
+    background-color: #D8DFE8;
+    width: 60%;
+    height: 550px;
+    display: inline-block;
+    margin: 1.5em;
+}
+
+#textarea {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-size: 1.5em;
+    width: 100%;
+    height: 500px;
+    padding: 3em;
+    margin: 0 2em;
+    border: none;
+    outline:none;
+    resize: none;
+    box-sizing: border-box;
+}
+
+#textarea::placeholder {
+    color: #0A3871;
+}
+
+.aside {
+    background-color: white;
+    color: #000;
+    /* font-size: 1.5em; */
+    font-weight: bold;
+    width: 20%;
+    height: 550px;
+    padding: 3em;
+    margin: 1em;
+    border-radius: 32px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boton-encriptar {
+    background-color: #0A3871;
+    color: #FFF;
+    font-size: 20px;
+    padding: 1em 6em;
+    margin: 1em;
+    border-radius: 15px;
+    border: none;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.boton-desencriptar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-size: 20px;
+    padding: 1em 6em;
+    border-radius: 15px;
+    border: #0A3871 1px solid;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.boton-copiar {
+    background-color: #FFF;
+    color: #0A3871;
+    font-size: 20px;
+    padding: 1em 6em;
+    border-radius: 15px;
+    border: #0A3871 1px solid;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.boton-copiar:hover, .boton-encriptar:hover, .boton-desencriptar:hover {
+    transform: scale(1.1);
+}
+
+.botones {
+    margin: 0 0 0 8em;
+}
+
+.secreto {
+    padding: 1em 0;
 }

@@ -6,21 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="style.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
 </head>
 <body>
     <main>
-        <section>
-            <input type="text" placeholder="Ingrese el texto aquí">
-            <input type="submit" value="Encriptar" id="encriptar">
-            <input type="submit" value="Desencriptar" id="desencriptar">
+        <section class="section">
+            <img src="./imagenes/Logo.png" alt="Logo Alura">
+            <textarea id="textarea" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="botones">
+                <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon> Solo letras minúsculas y sin acentos</p>
+                <input  class="boton-encriptar" type="submit" value="Encriptar" id="encriptar">
+                <input class="boton-desencriptar" type="submit" value="Desencriptar" id="desencriptar"> 
+            </div>
+            
         </section> 
 
-        <section>
-            <p id="secreto">Ningun mensaje fue encontrado</p>
-            <button id="copiar">Copiar</button>
-        </section>
+        <aside class="aside">
+            <img src="./imagenes/Muñeco.png" alt="">
+            <div id="secreto" class="secreto">
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingrese el texto que desees encriptar o desencriptar</p>
+            </div>
+            <button id="copiar" class="boton-copiar" hidden>Copiar</button>
+        </aside>
     </main>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
     <script src="script.js" type="module"></script>
 </body>
 </html>
