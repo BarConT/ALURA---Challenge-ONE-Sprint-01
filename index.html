@@ -15,16 +15,17 @@
         <section class="section">
             <img src="./imagenes/Logo.png" alt="Logo Alura">
             <textarea id="textarea" placeholder="Ingrese el texto aquí"></textarea>
+            <p id="pegar" hidden><iconify-icon icon="fa6-regular:paste" class="pegar"></iconify-icon></p>
+            <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon> Solo letras minúsculas y sin acentos</p>
             <div class="botones">
-                <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon> Solo letras minúsculas y sin acentos</p>
                 <input  class="boton-encriptar" type="submit" value="Encriptar" id="encriptar">
                 <input class="boton-desencriptar" type="submit" value="Desencriptar" id="desencriptar"> 
             </div>
             
         </section> 
 
-        <aside class="aside">
-            <img src="./imagenes/Muñeco.png" alt="">
+        <aside class="aside" id="aside">
+            <img id="imagen-munieco" src="./imagenes/Muñeco.png" alt="">
             <div id="secreto" class="secreto">
                 <p>Ningún mensaje fue encontrado</p>
                 <p>Ingrese el texto que desees encriptar o desencriptar</p>

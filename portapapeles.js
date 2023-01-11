@@ -1,10 +1,20 @@
+let portaPapel;
+let pegar = document.querySelector("#pegar");
+let textarea = document.querySelector("textarea");
+
 export function copiarAlPortapapeles() {
-    let textarea = document.querySelector("textarea");
+
     let portapapeles = document.createElement("input");
     portapapeles.setAttribute("value", document.querySelector('#secreto').innerHTML);
     document.body.appendChild(portapapeles);
     portapapeles.select();
     document.execCommand("copy");
-    document.body.removeChild(portapapeles);
+    portaPapel = document.body.removeChild(portapapeles);
     textarea.value = "";
+    textarea.focus();
+    pegar.style.display = "block";
+}
+
+export function pegarPortapapeles() {
+    textarea.value = portaPapel.value;
 }
