@@ -9,12 +9,13 @@ let desencriptar = document.querySelector("#desencriptar");
 let copiar = document.querySelector("#copiar");
 let secreto = document.querySelector("#secreto");
 let imagen = document.querySelector("#imagen-munieco");
-let aside = document.querySelector("#aside");
+let lateral = document.querySelector("#lateral");
 
 function encriptarFrase() {
     copiar.style.display = "block";
     imagen.style.display = "none";
-    aside.style.justifyContent = "space-between";
+    lateral.style.justifyContent = "space-between";
+    secreto.style.textAlign = "left";
 }
 
 function mostrarTextoDesencriptado() {

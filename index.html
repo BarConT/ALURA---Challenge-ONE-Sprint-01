@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style1.css"> -->
     <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <main>
-        <section class="section">
+    <main class="contenedor">
+        <section class="principal">
             <img src="./imagenes/Logo.png" alt="Logo Alura">
-            <textarea id="textarea" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea id="textarea" class="textarea" placeholder="Ingrese el texto aquí" maxlength="480"></textarea>
             <p id="pegar" hidden><iconify-icon icon="fa6-regular:paste" class="pegar"></iconify-icon></p>
-            <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon> Solo letras minúsculas y sin acentos</p>
+            <p><iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon>Solo letras minúsculas y sin acentos</p>
             <div class="botones">
                 <input  class="boton-encriptar" type="submit" value="Encriptar" id="encriptar">
                 <input class="boton-desencriptar" type="submit" value="Desencriptar" id="desencriptar"> 
@@ -24,14 +27,14 @@
             
         </section> 
 
-        <aside class="aside" id="aside">
-            <img id="imagen-munieco" src="./imagenes/Muñeco.png" alt="">
+        <section class="lateral" id="lateral">
+            <img id="imagen-munieco" class="imagen-munieco" src="./imagenes/Muñeco.png" alt="">
             <div id="secreto" class="secreto">
                 <p>Ningún mensaje fue encontrado</p>
-                <p>Ingrese el texto que desees encriptar o desencriptar</p>
+                <p class="texto">Ingrese el texto que desees encriptar o desencriptar</p>
             </div>
             <button id="copiar" class="boton-copiar" hidden>Copiar</button>
-        </aside>
+        </section>
     </main>
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
     <script src="script.js" type="module"></script>

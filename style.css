@@ -1,64 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 body {
     background-color: #D8DFE8;
     color: #0A3871;
     font-family: 'Inter', sans-serif;
-    font-size: 1.5em;
 }
 
-main {
-    width: 100vw;
-    height: 100vh;
+.contenedor {
+    height: auto;
+    width: 100%;
+    padding: 30px;
     display: flex;
-    flex-direction: row;
     justify-content:space-around;
 }
 
-.section {
-    background-color: #D8DFE8;
-    width: 50%;
-    height: 80%;
-    display: inline-block;
-    margin: 1.5em;
+.principal {
+    width: 75%;
+    min-width: 600px;
+    min-height: 500px;
+    /* display: inline-block; */
 }
 
-#textarea {
+.lateral {
+    background-color: white;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 25%;
+    min-width: 350px;
+    min-height: 650px;
+    padding: 2em;
+    margin: 1em;
+    text-align: center;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.textarea {
     background-color: #D8DFE8;
     color: #0A3871;
-    font-size: 1.5em;
-    width: 100%;
+    font-size: 1.8em;
+    width: 90%;
     height: 70%;
     padding: 3em;
     margin: 0 2em;
     border: none;
     outline:none;
     resize: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
-#textarea::placeholder {
+.textarea::placeholder {
     color: #0A3871;
+    font-family: 'Inter', sans-serif;
 }
 
-.aside {
-    background-color: white;
-    color: #000;
-    /* font-size: 1.5em; */
-    font-weight: bold;
-    width: 20%;
-    height: 70%;
-    padding: 2em;
-    margin: 1em;
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.texto {
+    font-size: .6em;
 }
 
 .boton-encriptar {
     background-color: #0A3871;
     color: #FFF;
     font-size: 20px;
-    padding: 1em 6em;
+    padding: 1em 4em;
     margin: 1em;
     border-radius: 15px;
     border: none;
@@ -70,7 +78,7 @@ main {
     background-color: #D8DFE8;
     color: #0A3871;
     font-size: 20px;
-    padding: 1em 6em;
+    padding: 1em 4em;
     margin: 1em;
     border-radius: 15px;
     border: #0A3871 1px solid;
@@ -82,7 +90,7 @@ main {
     background-color: #FFF;
     color: #0A3871;
     font-size: 20px;
-    padding: 1em 6em;
+    padding: 1em 5em;
     border-radius: 15px;
     border: #0A3871 1px solid;
     transition: 1s all;
@@ -100,13 +108,88 @@ main {
 
 .secreto {
     padding: 1em 0;
+    overflow-wrap: break-word;
 }
 
 .pegar {
+    font-size: 1.5em;
     transition: .5s all;
     cursor: pointer;
 }
 
 .pegar:hover {
-    font-size: 1.1em;
+    font-size: 1.6em;
+}
+
+@media screen and (max-width:768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .imagen-munieco {
+        display: none;
+    }
+
+    .principal {
+        width: 100%;
+        padding-top: 2em;
+        margin: 0;
+        min-height: 300px;
+    }
+    
+    .textarea {
+        width: 600px;
+        min-height: 400px;
+        padding: 0;
+        margin-top: 3em;
+    }
+
+    .lateral {
+        width:100%;
+        margin: 0 auto;
+        min-height: 150px;
+        padding: 1em;
+    }
+
+    .boton-copiar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .contenedor {
+        margin: 0;
+        padding: 0;
+    }
+  
+    .textarea {
+        width: 480px;
+        padding: 1em;
+        margin: auto;
+        
+    }
+
+    .lateral {
+        width: 420px;
+        margin: 1em auto;
+    }
+
+    .botones {
+        flex-direction: column;
+        width: 480px;
+    }
+
+    .boton-encriptar, .boton-desencriptar {
+        padding: 1em;
+        width: 80%;
+        margin: .5em auto;
+    }
+
+    .boton-copiar:hover, .boton-encriptar:hover, .boton-desencriptar:hover {
+        transform: none;
+    }
+
+    .pegar {
+        margin-left: 20px;
+    }
 }

@@ -1,6 +1,6 @@
-let portaPapel;
 let pegar = document.querySelector("#pegar");
 let textarea = document.querySelector("textarea");
+let portaPapel;
 
 export function copiarAlPortapapeles() {
 
