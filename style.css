@@ -58,13 +58,9 @@ body {
     box-sizing: border-box;
 }
 
-.textarea::placeholder {
+::placeholder {
     color: #0A3871;
     font-family: 'Inter', sans-serif;
-}
-
-.texto {
-    font-size: .6em;
 }
 
 .botones {
@@ -114,28 +110,43 @@ body {
     transform: scale(1.1);
 }
 
+.centrar-texto {
+    text-align: center;
+}
+
 .secreto {
     padding: 1em 0;
     overflow-wrap: break-word;
 }
 
-.pegar {
+.iconos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.borrar, .pegar {
     font-size: 1.5em;
     transition: .5s all;
     cursor: pointer;
 }
 
-.pegar:hover {
+.borrar:hover, .pegar:hover {
     font-size: 1.6em;
 }
 
 .footer {
     background-color: #0A3871;
     color: white;
-    height: 5em;
+    height: 6em;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.redes a {
+    color: #FFF;
+    font-size: 3em;
 }
 
 @media screen and (max-width:1030px) {

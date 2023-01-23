@@ -7,9 +7,12 @@ let textarea = document.querySelector("#textarea");
 let encriptar = document.querySelector("#encriptar");
 let desencriptar = document.querySelector("#desencriptar");
 let copiar = document.querySelector("#copiar");
+let borrar = document.querySelector("#borrar");
 let secreto = document.querySelector("#secreto");
 let imagen = document.querySelector("#imagen-munieco");
 let lateral = document.querySelector("#lateral");
+
+// pegar.style.visibility = "hidden"
 
 function encriptarFrase() {
     copiar.style.display = "block";
@@ -32,9 +35,16 @@ function mostrarTextoEncriptado() {
     }   
 }
 
+function borrarTextarea() {
+    textarea.value = "";
+    textarea.focus();
+}
+
 copiar.onclick = copiarAlPortapapeles;
 encriptar.onclick = mostrarTextoEncriptado;
 desencriptar.onclick = mostrarTextoDesencriptado;
 pegar.onclick = pegarPortapapeles;
+borrar.onclick = borrarTextarea;
+
 
 

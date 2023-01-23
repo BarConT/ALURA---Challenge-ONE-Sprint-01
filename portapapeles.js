@@ -12,7 +12,7 @@ export function copiarAlPortapapeles() {
     portaPapel = document.body.removeChild(portapapeles);
     textarea.value = "";
     textarea.focus();
-    pegar.style.display = "block";
+    pegar.hidden = false;
 }
 
 export function pegarPortapapeles() {
