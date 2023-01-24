@@ -1,6 +1,7 @@
 import {encriptarTexto} from './encriptar.js';
 import {desencriptarTexto} from './desencriptar.js';
 import {copiarAlPortapapeles, pegarPortapapeles} from './portapapeles.js';
+import {validarTextarea} from './validar.js';
 
 let pegar = document.querySelector("#pegar");
 let textarea = document.querySelector("#textarea");
@@ -11,8 +12,10 @@ let borrar = document.querySelector("#borrar");
 let secreto = document.querySelector("#secreto");
 let imagen = document.querySelector("#imagen-munieco");
 let lateral = document.querySelector("#lateral");
+let informacion = document.querySelector("#informacion");
 
 // pegar.style.visibility = "hidden"
+textarea.focus();
 
 function encriptarFrase() {
     copiar.style.display = "block";
@@ -23,21 +26,39 @@ function encriptarFrase() {
 
 function mostrarTextoDesencriptado() {
     if (textarea.value != "") {
+        if (!validarTextarea(textarea.value)){
+            ingresarCaracteresNoValidos()
+        } else  {
         secreto.innerHTML = desencriptarTexto(textarea.value);
         encriptarFrase();
+        ingresarCaracteresValidos();
+        }
     }  
 }
 
 function mostrarTextoEncriptado() {
     if (textarea.value != "") {
-        secreto.innerHTML = encriptarTexto(textarea.value);
-        encriptarFrase();
-    }   
+        if (!validarTextarea(textarea.value)){
+            ingresarCaracteresNoValidos()
+        } else  {
+            secreto.innerHTML = encriptarTexto(textarea.value);
+            encriptarFrase();
+            ingresarCaracteresValidos();
+        }  
+    }
 }
 
 function borrarTextarea() {
     textarea.value = "";
     textarea.focus();
+}
+
+function ingresarCaracteresNoValidos() {
+    informacion.classList.add('informacion');
+}
+
+function ingresarCaracteresValidos() {
+    informacion.classList.remove('informacion');
 }
 
 copiar.onclick = copiarAlPortapapeles;

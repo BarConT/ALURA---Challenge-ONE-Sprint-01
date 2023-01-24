@@ -112,6 +112,12 @@ body {
 
 .centrar-texto {
     text-align: center;
+    transition: 2s all;
+}
+
+.informacion {
+    color: #F00;
+    font-size: 1.5em;
 }
 
 .secreto {
