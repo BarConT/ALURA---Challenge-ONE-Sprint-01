@@ -116,9 +116,25 @@ body {
 }
 
 .informacion {
-    color: #F00;
-    font-size: 1.5em;
+    animation-name: alerta;
+    animation-duration: 3s;
 }
+
+@keyframes alerta {
+    0%  {
+            color: #0A3871;
+            font-size: 1em;
+        }
+
+    50% {
+            color: #F00;
+            font-size: 1.2em;
+    }
+    100%{
+            color: #0A3871;
+            font-size: 1em;
+        }
+  }
 
 .secreto {
     padding: 1em 0;
@@ -174,7 +190,7 @@ body {
     
     .textarea {
         width: 100%;
-        min-height: 18.75em;
+        min-height: 17em;
         padding: 1em;
         margin: 3em 0;
         overflow:auto;

@@ -14,7 +14,6 @@ let imagen = document.querySelector("#imagen-munieco");
 let lateral = document.querySelector("#lateral");
 let informacion = document.querySelector("#informacion");
 
-// pegar.style.visibility = "hidden"
 textarea.focus();
 
 function encriptarFrase() {
@@ -27,24 +26,23 @@ function encriptarFrase() {
 function mostrarTextoDesencriptado() {
     if (textarea.value != "") {
         if (!validarTextarea(textarea.value)){
-            ingresarCaracteresNoValidos()
+            ingresarCaracteresNoValidos();    
         } else  {
-        secreto.innerHTML = desencriptarTexto(textarea.value);
-        encriptarFrase();
-        ingresarCaracteresValidos();
+            secreto.innerHTML = desencriptarTexto(textarea.value);
+            encriptarFrase();
         }
-    }  
+    } 
 }
 
-function mostrarTextoEncriptado() {
+function mostrarTextoEncriptado() { 
     if (textarea.value != "") {
         if (!validarTextarea(textarea.value)){
-            ingresarCaracteresNoValidos()
+            ingresarCaracteresNoValidos();
         } else  {
             secreto.innerHTML = encriptarTexto(textarea.value);
             encriptarFrase();
-            ingresarCaracteresValidos();
-        }  
+        } 
+        
     }
 }
 
@@ -55,6 +53,7 @@ function borrarTextarea() {
 
 function ingresarCaracteresNoValidos() {
     informacion.classList.add('informacion');
+    setTimeout(ingresarCaracteresValidos, 3000);
 }
 
 function ingresarCaracteresValidos() {
