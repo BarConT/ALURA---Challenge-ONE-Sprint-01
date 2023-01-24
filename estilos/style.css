@@ -242,4 +242,20 @@ body {
     .lateral {
         min-width: 280px;
     }
+
+    @keyframes alerta {
+        0%  {
+                color: #0A3871;
+                font-size: 1em;
+            }
+
+        50% {
+                color: #F00;
+                font-size: 1.1em;
+        }
+        100%{
+                color: #0A3871;
+                font-size: 1em;
+            }
+  }
 }
